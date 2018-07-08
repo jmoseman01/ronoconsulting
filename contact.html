@@ -36,29 +36,33 @@
                 <div class="header-background"></div>
         </header>
     </section>
+    <section class="block-2">
         <div class="container">
-		<?php
-			$name = $_POST["fName"].' '.$_POST["lName"];
-			// the message
-			$msg = $name.' sent you the following comment from '.$_POST["email"]."\n".$_POST["comment"];
-
-			// use wordwrap() if lines are longer than 70 characters
-			$msg = wordwrap($msg,70);
-
-			// send email
-			// $success = mail("ronocollc@outlook.com","You got an RSV Request",$msg);
-			$success = mail("jmoseman01@gmail.com", $name." sent you a comment",$msg);
-
-			if ($success) {
-			    echo "<p>Your question will be answered.</p>";
-			}
-			else{
-			    $errorMessage = error_get_last()['message'];
-			    echo $errorMessage;
-			    print_r(error_get_last());
-			}
-		?>
-    <div class="container">
+            <div class="panel panel-default" style="padding: 10px">
+                <h1>Questions?</h1>
+                <form action="mail.php" method="post">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" name="email" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">First Name</label>
+                        <input type="text" class="form-control" name="fName" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Last Name</label>
+                        <input type="text" class="form-control" name="lName" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Comment</label>
+                        <textarea class="form-control" name="comment" placeholder="Comment"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98094893-1"></script>
     <script>
