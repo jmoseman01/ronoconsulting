@@ -16,25 +16,20 @@
 
 <body>
     <section>
-        <header class="block-35">
-            <div class="container">
-                <div class="row">
-                    <nav class="navbar col-sm-12" role="navigation">
-                        <div class="navbar-header">
-                            <div class="collapse navbar-collapse pull-right" id="navbar-collapse-35">
-                                <ul class="nav pull-left">
-                                    <li><a href="./index.html">HOME</a></li>
-                                    <li><a href="./consulting.html">CONSULTING</a></li>
-                                    <li><a href="./projects.html">PROJECTS</a></li>
-                                    <li><a href="./biography.html">BIOGRAPHY</a></li>
-                                    <li><a href="./contact.html">CONTACT</a></li>
-                                </ul>
-                            </div>
-                    </nav>
-                    </div>
+        <nav style="margin: 0px" class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Ronoconsulting</a>
                 </div>
-                <div class="header-background"></div>
-        </header>
+                <ul class="nav navbar-nav">
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./consulting.html">CONSULTING</a></li>
+                    <li><a href="./projects.html">PROJECTS</a></li>
+                    <li><a href="./biography.html">BIOGRAPHY</a></li>
+                    <li class="active"><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
     </section>
         <div class="container">
 		<?php
